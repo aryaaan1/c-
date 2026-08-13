@@ -15,7 +15,7 @@ vector(){
 void add(int ele){
     if(size==capacity){
         capacity *=2;
-        int* arr1= new int[capacity*2];
+        int* arr1= new int[capacity];
         for(int i =0;i<size ; i++){
             arr1[i] = arr[i];
         }
@@ -40,7 +40,14 @@ void elementprint(){
     
          return arr[index];
     }
-
+void remove(){
+    if(size ==0){
+        cout<<" invalid request";
+    }
+    size--;
+    // yaha pa return ka use nahi hai return sirf ak
+    // value retun karta hai phir ruk jata hai
+}
    
  
 
@@ -61,10 +68,10 @@ int main(){
     v1.elementprint();
     cout<<endl;
    cout<< v1.size<<" "<<v1.capacity<<endl;
-   cout<<v1.get(1);
-   
-  
-   
+   cout<<v1.get(1)<<endl;
+   v1.remove();
+   v1.elementprint();
+   cout<<endl;
 }
 
  
