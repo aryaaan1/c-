@@ -9,7 +9,9 @@ int main(){
       arr.push_back(65);
        arr.push_back(70);
 
-       auto it = upper_bound(arr.begin(),arr.end(),70);
+       
+
+       auto it = upper_bound(arr.begin(),arr.end(),65);
        cout<<*it;
 
 
